@@ -2,19 +2,21 @@
 Arquitetura de Dados em Nuvem
 
 # TÍTULO DO PROJETO
-`CURSO`
-`ANO/SEMESTRE`
+Tecnólogo em Banco de Dados
+2026/1
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Maria Paula C Mangabeira de Lima
+* Aricia Santos Oliveira
+* Carlos Henrique Rodrigues Silva
+* Eva Gabriela de Jesus Oliveira
+* Isabela Vitória Duarte Custódio
+* Lucimara Araújo dos Santos Queiroz
 
 ## Orientador
-* Nome completo do professor 1
+* Cristiano Geraldo Teixeira Silva
 
 # Documentação
 

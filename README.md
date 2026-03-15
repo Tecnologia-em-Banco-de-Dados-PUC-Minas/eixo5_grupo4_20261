@@ -1,11 +1,15 @@
 # Eixo-5
 Arquitetura de Dados em Nuvem
 
-# TÍTULO DO PROJETO
+# Análise de Vendas da Amazon
 Tecnólogo em Banco de Dados
 2026/1
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Realizaremos uma análise exploratória dos dados e desenvolveremos um modelo inicial de machine learning capaz de prever a quantidade de unidades vendidas (quantity_sold) considerando fatores temporais e características dos produtos. O conjunto de dados utilizados (dataset) neste projeto consiste em um compilado de transações de vendas do e-commerce da Amazon, no período de 2022 e 2023, disponível na plataforma Kaggle.
+Ele contém aproximadamente 50.000 registros de transações ao longo desse período, que inclui informações pertinentes às transações como categoria do produto, preço, quantidades vendidas, regiões, formas de pagamento, dentre outras.
+
+Dados disponíveis em: https://www.kaggle.com/datasets/litonislam/amazon-sales-analysis-cleaned-data/data
+
 
 ## Integrantes
 * Maria Paula C Mangabeira de Lima

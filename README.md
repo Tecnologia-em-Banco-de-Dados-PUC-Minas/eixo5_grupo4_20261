@@ -27,7 +27,7 @@ Dados disponíveis em: https://www.kaggle.com/datasets/litonislam/amazon-sales-a
 | Etapa         | Atividades |
 |  :----:   | ----------- |
 | ETAPA 1        |[Documentação de Contexto](projeto/inicio_do_projeto.md) |
-| ETAPA 2        |[Coleta de Dados](projeto/coleta_dados.md) |
+| ETAPA 2        |[Coleta de Dados](projeto/coleta_de_dados.md) |
 | ETAPA 3        |[Pré-processamento](projeto/pre_processamento.md) |
 | ETAPA 4        |[Aprendizagem de Máquina](projeto/aprendizado_maquina_rev.md)|
 | ETAPA 5        |[Análise dos Resultados](projeto/analise_resultados.md) |

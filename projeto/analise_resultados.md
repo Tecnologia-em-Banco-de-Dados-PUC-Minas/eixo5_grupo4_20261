@@ -1,3 +1,5 @@
+# Análise de Resultados
+
 ANÁLISE DE PREÇO
 
 Foi utilizada uma base de dados de vendas da plataforma Amazon, com transações no período de 01/2022 à 12/2023.

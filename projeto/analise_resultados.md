@@ -137,3 +137,93 @@ A classe "Baixa" apresentou melhores indicadores de precisão, recall e F1-score
 
 
 <img width="691" height="545" alt="image" src="https://github.com/user-attachments/assets/3d0c579d-e09a-4c69-813d-2cc2acd7f17d" />
+
+
+
+
+QUANTIDADE VENDIDA
+
+Utilizamos a mesma base de dados de vendas da plataforma Amazon, com transações no período de 01/2022 à 12/2023, citada acima.
+
+Na análise descritiva conhecemos as variáveis categóricas e numéricas, seus comportamentos ao longo dos dois anos. 
+
+<img width="352" height="254" alt="image" src="https://github.com/user-attachments/assets/99a0ab06-1237-460f-8b17-50f0c72540f7" />
+
+<img width="333" height="222" alt="image" src="https://github.com/user-attachments/assets/de94c1f2-6808-498e-bf60-4fa1bad169e9" />
+
+<img width="298" height="223" alt="image" src="https://github.com/user-attachments/assets/34e5f83a-fc83-481d-91c0-8892f0fb5747" />
+
+<img width="640" height="354" alt="image" src="https://github.com/user-attachments/assets/888c8204-856b-4d0a-9f7c-a324224a9d70" />
+
+Plotamos histogramas das variáveis numéricas ao longo do tempo para observarmos o comportamento de cada uma delas ao longo do período:
+
+<img width="769" height="298" alt="image" src="https://github.com/user-attachments/assets/aed85904-5b46-4c6d-89b4-b4f77f5cfe98" />
+
+<img width="767" height="294" alt="image" src="https://github.com/user-attachments/assets/0e5b4e3b-4000-4de7-acde-52779f89b9ae" />
+
+Os gráficos abaixo demonstram a evolução das vendas e as sazonalidades ocorridas nos anos de 2022 e 2023:
+
+<img width="819" height="384" alt="image" src="https://github.com/user-attachments/assets/def952bd-610c-4adf-8365-c17d27162edc" />
+
+<img width="793" height="443" alt="image" src="https://github.com/user-attachments/assets/3f9d23af-429e-4a6a-b9ba-974107b9f18a" />
+
+Modelos de Aprendizado
+
+Árvore de Decisão
+O modelo de árvore de decisão está classificando  a variável quantity_sold (quantidade vendida).
+
+
+<img width="958" height="655" alt="image" src="https://github.com/user-attachments/assets/f342f5d6-4554-4cf7-8b9c-63467746bbbf" />
+
+MAE (Mean Absolute Error): 1.10  
+R^2 (R-squared): 0.14
+
+Observando o topo da árvore, as features que aparecem primeiro (profit e discounted_price) são as mais importantes para a previsão de quantity_sold neste modelo. Isso significa que a quantidade vendida é primeiramente segmentada com base no lucro e no preço com desconto.
+
+A árvore mostra que as variáveis “profit” e “discounted_price” são divisores importantes para o target “quantity_sold”. No entanto, com um max_depth=3 e um R² baixo, este modelo é bastante simples e não captura a maior parte da variabilidade na quantidade vendida. 
+
+Random Forest
+
+Como o Random Forest geralmente é um modelo mais robusto que a Árvore de Decisão individual, rodamos o modelo buscando um desempenho melhor, aumentando o poder preditivo. O que não ocorreu, afinal o R^2 da árvore de decisão ficou em 0.14, enquanto o do Random Forest ficou em 0.13:
+
+<img width="694" height="272" alt="image" src="https://github.com/user-attachments/assets/2499aa0d-70bf-44cc-9acd-56701df00b6a" />
+
+MAE (Mean Absolute Error): 1.11.
+R² (R-squared): 0.13
+
+XGBoost
+
+<img width="711" height="272" alt="image" src="https://github.com/user-attachments/assets/13060787-479e-4bf5-b63f-f8b455f07d81" />
+
+MAE (Mean Absolute Error): 1.13.
+R² (R-squared): 0.09
+
+Comparando o XGBoost com a Árvore de Decisão e o Random Forest:
+
+•	Árvore de Decisão (max_depth=3): MAE de 1.10,  R² de 0.14.
+•	Random Forest: MAE de 1.11,  R² de 0.13.
+•	XGBoost: MAE de 1.13,  R² de 0.09.
+o XGBoost obteve o pior desempenho entre os três modelos em termos de R². Um R² de 0.09 é bastante baixo, indicando que o modelo tem uma capacidade muito limitada de explicar a variação na “quantity_sold”.
+
+Para demonstrar as diferenças encontradas plotamos um gráfico de comparação das previsões versos o real:
+
+<img width="930" height="484" alt="image" src="https://github.com/user-attachments/assets/100698c0-2a20-48df-bb08-b54c45a798fc" />
+
+
+Possíveis razões para os baixos desempenhos:
+
+•	As nossas features não são suficientemente preditivas para prever a "quantity_sold".
+
+•	A relação entre as features e o target (quantity_sold) é muito complexa ou não linear para ser capturada eficazmente por esses modelos, ou existem outros fatores não incluídos nos dados.
+
+•	O modelo está subajustado (underfitting), ou seja, o modelo não aprendeu bem os padrões dos dados de treinamento e, portanto, não generaliza bem para novos dados.
+
+
+
+
+
+
+
+
+
+

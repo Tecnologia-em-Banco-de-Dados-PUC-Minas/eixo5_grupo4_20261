@@ -221,6 +221,13 @@ Possíveis razões para os baixos desempenhos:
 •	O modelo está subajustado (underfitting), ou seja, o modelo não aprendeu bem os padrões dos dados de treinamento e, portanto, não generaliza bem para novos dados.
 
 
+# Otimização
+
+Ao realizarmos a análise exploratória obtivemos bons resultados e perspectivas interessantes para aplicação de modelos de machine learning, tanto que escolhemos duas features para trabalharmos: quantity_sold e análise de preço. Porém ao rodarmos os modelos constatamos percentuais de explicação e capacidade preditiva baixas o que torna necessário ajustes de hiperparâmetros e outros procedimentos para aprimorar a base já existente. Também seria uma possibilidade enriquecer o projeto com outras bases que trouxessem mais dados a respeito das vendas.
+
+Sugerimos para projetos futuros complementar a base e fazer análises que analisem a sazonalidade das vendas, análise a relação das avaliação dos clientes e o ranking de vendas, vendas por categoria X região demonstarndo o comportamento dos consumidores, entre outras possibilidades.
+
+O Kaggle se mostra uma ferramenta muito interresante e útil para o desenvolvimento de projetos de dados, porém devemos buscar com cautela os datasets a serem escolhidos uma vez que muitos podem ter sido criados com inteligência artificial.
 
 
 
